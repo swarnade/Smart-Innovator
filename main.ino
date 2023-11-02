@@ -47,7 +47,6 @@ const long timeoutTime = 2000;
 
 
 
-
 void setup() {
   Serial.begin(115200);
 
@@ -118,7 +117,7 @@ void loop(){
               digitalWrite(outrelay2, LOW);
               Led2=1;
             }
-            
+
             else if (header.indexOf("GET /27/off") >= 0) {
               Serial.println("Relay 2 off");
               OutputRelay2 = "off";
