@@ -146,7 +146,7 @@ void setup() {
     delay(500);
     Serial.print(".");
   }
-
+  //
   Serial.println("");
   Serial.println("WiFi connected.");
   Serial.println("IP address: ");
@@ -161,6 +161,7 @@ void loop(){
   if (client) {                             
     currentTime = millis();
     previousTime = currentTime;
+    // Client Connected
     Serial.println("New Client.");          
     String currentLine = "";                
     while (client.connected() && currentTime - previousTime <= timeoutTime) { 
