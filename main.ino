@@ -23,6 +23,7 @@ WiFiServer server(80);
 String header;
 
 
+
 String OutputRelay1 = "off";
 String OutputRelay2 = "off";
 
@@ -51,7 +52,79 @@ void disp(int Led1 ,int Led2)
                   ;
               } 
               display.clearDisplay();
+
+              if(Led1==0 && Led2==0)
+              {
+
+              //Condition When Both Led Are In In-Active
+              display.setFont(&FreeSerif9pt7b);
+              display.clearDisplay();
+              display.setTextSize(1);
+              display.setTextColor(WHITE);
+              display.setCursor(0, 20);
+              display.println("Relay 1 Is Off");
+              display.display();
+              display.setCursor(0, 55);
+              display.println("Relay 2 Is Off");
+              display.display();
+              }
+
+              else if(Led1==0 && Led2==1)
+              {
+
+              //Condition When Led1 Is Closed And Led2 Is Open
+              display.setFont(&FreeSerif9pt7b);
+              display.clearDisplay();
+              display.setTextSize(1);
+              display.setTextColor(WHITE);
+              display.setCursor(0, 20);
+              display.println("Relay 1 Is Off");
+              display.display();
+              display.setCursor(0, 55);
+              display.println("Relay 2 Is On");
+              display.display();
+              }
+
+
+
+
+
+              else if(Led1==1 && Led2==0)
+              {
+
+              //Condition When Led1 Is Open And Led2 Is Closed
+              display.setFont(&FreeSerif9pt7b);
+              display.clearDisplay();
+              display.setTextSize(1);
+              display.setTextColor(WHITE);
+              display.setCursor(0, 20);
+              display.println("Relay 1 Is On");
+              display.display();
+              display.setCursor(0, 55);
+              display.println("Relay 2 Is Off");
+              display.display();
+              }
+
+
+
+
+              else if(Led1==1 && Led2==1)
+              {
+
+              //Condition When Both Led Are Open
+              display.setFont(&FreeSerif9pt7b);
+              display.clearDisplay();
+              display.setTextSize(1);
+              display.setTextColor(WHITE);
+              display.setCursor(0, 20);
+              display.println("Relay 1 Is On");
+              display.display();
+              display.setCursor(0, 55);
+              display.println("Relay 2 Is On");
+              display.display();
+              }
 }
+
 
 
 
@@ -189,3 +262,4 @@ void loop(){
     Serial.println("");
   }
 }
+
