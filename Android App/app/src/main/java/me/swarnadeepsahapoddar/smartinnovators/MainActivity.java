@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true); // Enable JavaScript
 
         // Load your website URL here
-        webView.loadUrl("https://sittechfrenzy.tech/");
+        webView.loadUrl("http://10.20.30.31");
     }
 }
 

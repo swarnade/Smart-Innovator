@@ -217,13 +217,15 @@ void loop(){
             client.println("<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
             client.println("<link rel=\"icon\" href=\"data:,\">");
 
-            client.println("<style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;background-color:#22272c;}");
+            client.println("<style>html {color:#ffd32d; font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;background-color:#22272c;}");
             client.println(".button { background-color: #c38fff; border: none; color: black; padding: 16px 40px;border-radius:5%;");
             client.println("text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}");
-            client.println(".button2 {background-color: #03dac6;}</style></head>");
+            client.println("h1{color:white;}");
+            client.println("p1{color:#03DAC6}");
+            client.println(".button2 {background-color: grey}</style></head>");
             
 
-            client.println("<body><h1>ESP32 Web Server</h1>");
+            client.println("<body><h1>Smart Switch Controller</h1>");
             
  
             client.println("<p>Relay 1 - State " + OutputRelay1 + "</p>");
@@ -242,6 +244,7 @@ void loop(){
             } else {
               client.println("<p><a href=\"/27/off\"><button class=\"button button2\">OFF</button></a></p>");
             }
+            client.println("<p1>Project By Smart Innovator's</p1>");
             client.println("</body></html>");
 
             
