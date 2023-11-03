@@ -129,6 +129,8 @@ void disp(int Led1 ,int Led2)
 
 
 
+
+
 void setup() {
   Serial.begin(115200);
 
@@ -146,7 +148,7 @@ void setup() {
     delay(500);
     Serial.print(".");
   }
-  //
+
   Serial.println("");
   Serial.println("WiFi connected.");
   Serial.println("IP address: ");
@@ -161,7 +163,7 @@ void loop(){
   if (client) {                             
     currentTime = millis();
     previousTime = currentTime;
-    // Client Connected
+    //Client Is Connected
     Serial.println("New Client.");          
     String currentLine = "";                
     while (client.connected() && currentTime - previousTime <= timeoutTime) { 
@@ -215,10 +217,10 @@ void loop(){
             client.println("<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
             client.println("<link rel=\"icon\" href=\"data:,\">");
 
-            client.println("<style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;}");
-            client.println(".button { background-color: black; border: none; color: white; padding: 16px 40px;");
+            client.println("<style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;background-color:#22272c;}");
+            client.println(".button { background-color: #c38fff; border: none; color: black; padding: 16px 40px;border-radius:5%;");
             client.println("text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}");
-            client.println(".button2 {background-color: #555546;}</style></head>");
+            client.println(".button2 {background-color: #03dac6;}</style></head>");
             
 
             client.println("<body><h1>ESP32 Web Server</h1>");
@@ -263,4 +265,3 @@ void loop(){
     Serial.println("");
   }
 }
-

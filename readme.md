@@ -15,8 +15,9 @@ that your devices are off to save energy.
 5. 5v Dual Channel Relay
 6. 0.96’ O-Led Display
 ## Tech Stack
- 1.Power Supply
- 2.Wifi Mediator
- 3.IOT Board
- 4.5v Relay
- 5.Mobile App
+1. C++ {IOT Board}
+2. Java {Android App}
+3. HTML/CSS/JS {Website}
+4. Android Studio
+5. Arduino IDE
+##
